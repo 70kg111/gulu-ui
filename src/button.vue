@@ -29,17 +29,18 @@ export default {
 <style lang="scss">
 /*按钮样式*/
 .g-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
-  padding: 0 1em;
-  font: inherit;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
   //   万金油居中代码
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  font-size: var(--font-size);
+  height: var(--button-height);
+  padding: 0 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background: var(--button-bg);
+  vertical-align: middle;
 
   @keyframes spin {
     0% {
