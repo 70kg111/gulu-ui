@@ -11,5 +11,8 @@
     "ui"
   ],
   "author": "living",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
