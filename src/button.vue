@@ -5,6 +5,7 @@
       <!-- 这里引入icon组件，v-if判断用户是否传入了svg，后面的:name="icon"是因为index.html页面里传过的settting等就是这里props接收的值icon -->
       <!-- 然后再传到icon组件中的`#i-${name}`中，就相当于是#i-setting，就显示出了setting的图标 -->
       <g-icon v-if="icon" :name="icon"></g-icon>
+      <g-icon name="loading" class="jiazai"></g-icon>
       <slot></slot>
     </button>
   </div>
@@ -32,6 +33,18 @@ export default {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .jiazai {
+    animation: spin 2s infinite linear;
+  }
 
   /*&符号表示当前的选择器，scss语法*/
   &:hover {
