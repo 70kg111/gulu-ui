@@ -10,6 +10,6 @@ Vue.component('g-icon',Icon)
 new Vue({
     el:"#app",
     data:{
-        words:'孙笑川'
+        isloading:true
     }
 })

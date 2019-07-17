@@ -40,7 +40,7 @@
         <g-button icon="settings">按钮</g-button>
         <g-button icon="download">下载</g-button>
         <g-button icon="dianzan">点赞</g-button>
-        <g-button icon="loading">加载</g-button>
+        <g-button :loading="isloading" @click="isloading = !isloading">加载</g-button>
     </div>
 
     <script src="./src/app.js"></script>
