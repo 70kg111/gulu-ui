@@ -2,11 +2,9 @@
   <div>
     <!-- 按钮中的提交两个字是传入进去的，所以不直接写，在index.html中的内容会显示到slot标签中，vue的特性 -->
     <button class="g-button">
-      <!-- 判断一下，如果用户不传参的话就不显示这个svg -->
-      <svg v-if="icon" class="icon">
-        <!-- 下面的最终效果是 <use xlink:href="#i-settings" />，这里的icon与下面props传入的值对应 -->
-        <use :xlink:href="`#i-${icon}`" />
-      </svg>
+      <!-- 这里引入icon组件，v-if判断用户是否传入了svg，后面的:name="icon"是因为index.html页面里传过的settting等就是这里props接收的值icon -->
+      <!-- 然后再传到icon组件中的`#i-${name}`中，就相当于是#i-setting，就显示出了setting的图标 -->
+      <g-icon v-if="icon" :name="icon"></g-icon>
       <slot></slot>
     </button>
   </div>
